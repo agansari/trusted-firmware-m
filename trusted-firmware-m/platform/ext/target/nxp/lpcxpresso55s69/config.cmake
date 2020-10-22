@@ -6,4 +6,7 @@
 #
 #-------------------------------------------------------------------------------
 
-set(TFM_PARTITION_PROTECTED_STORAGE     OFF     CACHE BOOL      "Enable Protected Storage partition" FORCE)
+#set(TFM_PARTITION_PROTECTED_STORAGE     OFF     CACHE BOOL      "Enable Protected Storage partition" FORCE)
+# set(PS_CREATE_FLASH_LAYOUT     OFF     CACHE BOOL      "Enable Protected Storage partition" FORCE)
+
+set(MCUBOOT_UPGRADE_STRATEGY            "SWAP_USING_MOVE" CACHE STRING "Upgrade strategy for images [OVERWRITE_ONLY, SWAP, DIRECT_XIP, RAM_LOAD]" FORCE)

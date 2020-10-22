@@ -103,6 +103,7 @@ function(trusted_firmware_build)
                -DTFM_TEST_REPO_PATH=${ZEPHYR_TFM_MODULE_DIR}/tf-m-tests
                -DTFM_TOOLCHAIN_PATH=${TFM_TOOLCHAIN_PATH}
                -DTFM_TOOLCHAIN_PREFIX=${TFM_TOOLCHAIN_PREFIX}
+               -DTFM_PROFILE=profile_medium
     BUILD_ALWAYS True
     USES_TERMINAL_BUILD True
     BUILD_BYPRODUCTS ${VENEERS_FILE} ${PSA_API_NS_PATH}

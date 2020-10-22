@@ -69,8 +69,8 @@
 #define FLASH_S_PARTITION_SIZE          (0x28000) /* S partition: 160 KB */
 #define FLASH_NS_PARTITION_SIZE         (0x18000) /* NS partition: 96 KB */
 #else
-#define FLASH_S_PARTITION_SIZE          (0x40000) /* S partition:  256 kB*/
-#define FLASH_NS_PARTITION_SIZE         (0x40000) /* NS partition: 256 kB*/
+#define FLASH_S_PARTITION_SIZE          (0x30000) /* S partition:  256 kB*/
+#define FLASH_NS_PARTITION_SIZE         (0x20000) /* NS partition: 256 kB*/
 #endif /* BL2 */
 #define FLASH_MAX_PARTITION_SIZE        ((FLASH_S_PARTITION_SIZE >   \
                                           FLASH_NS_PARTITION_SIZE) ? \
@@ -81,7 +81,7 @@
 #define FLASH_AREA_IMAGE_SECTOR_SIZE    (512)        /* 512 B. Flash memory program/erase operations have a page granularity. */
 
 /* Flash size, same as FLASH0_SIZE */
-#define FLASH_TOTAL_SIZE                (0x00098000) /* 608 KB. The last 17 pages (10 KB) are reserved on the 640 KB flash. Sub-region is 32KB, so available for application is 608 KB. */
+#define FLASH_TOTAL_SIZE                (0x98000) /* 608 KB. The last 17 pages (10 KB) are reserved on the 640 KB flash. Sub-region is 32KB, so available for application is 608 KB. */
 
 /* Flash layout info for BL2 bootloader */
 #define FLASH_BASE_ADDRESS              (0x00000000)
@@ -171,7 +171,7 @@
  */
 #define FLASH_PS_AREA_OFFSET            (FLASH_AREA_SCRATCH_OFFSET + \
                                          FLASH_AREA_SCRATCH_SIZE)
-#define FLASH_PS_AREA_SIZE              (0x2000)   /* 8 KB */
+#define FLASH_PS_AREA_SIZE              (0x4000)   /* 16 KB */
 
 /* Internal Trusted Storage (ITS) Service definitions */
 #define FLASH_ITS_AREA_OFFSET           (FLASH_PS_AREA_OFFSET + \
